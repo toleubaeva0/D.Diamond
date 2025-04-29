@@ -1,0 +1,406 @@
+* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+.body {
+    background-color: #e6f2ff;
+}
+
+/* 🔹 Шапка */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #004080;
+    padding: 15px;
+    height: 130px;
+    color: white;
+}
+
+.logo {
+    color: white;
+    padding: 40px;
+    border-radius: 50%;
+    text-align: center;
+    font-weight: bold;
+}
+.logo img {
+    width: 130px;
+    height: 130px;
+    border-radius: 70%;
+    object-fit: cover;
+}
+
+/* 🔹 Кнопки (сердце и корзина) */
+.icons {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    display: flex;
+    gap: 10px;
+    text-decoration: none;
+    
+}
+
+.icon-button {
+    background: none;
+    border: none;
+    font-size: 35px;
+    cursor: pointer;
+    text-decoration: none;
+    
+}
+
+    
+}
+
+.icon-button:hover {
+    transform: scale(1.2);
+    
+}
+
+/* 🔹 Меню */
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #0d3059;
+    padding: 10px;
+    color: white;
+}
+
+.menu-title {
+    font-size: 17px;
+    font-weight: bold;
+    font-family: georgia;
+}
+
+.menu-items {
+    display: flex;
+    flex: 1;
+    margin: 0 20px;
+    gap: 20px;
+}
+
+.menu-button {
+    flex: 1;
+    background: #436a98;
+    color: white;
+    border: none;
+    padding: 6px 6px;
+    font-size: 15px;
+    font-family: georgia;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    text-align: center;
+    text-decoration: none;
+}
+.menu-button a {
+    color: white;
+    text-decoration: none;
+    font-family: georgia;
+    padding: 15px 10px;
+
+}
+
+.menu-button:hover {
+    background: #005fbb;
+}
+
+
+
+/* 🔹 Контейнер (общий) */
+.container {
+    display: flex;
+    margin: 20px;
+    gap: 5px;
+}
+
+/* 🔹 Сайдбар (Каталог внутри) */
+.sidebar {
+    width: 140px;
+    background: #0d3059;
+    padding: 20px;
+    border-radius: 5px;
+    height: 387px;
+    
+}
+
+.catalog-title {
+    font-size: 22px;
+    font-family: georgia;
+    font-weight: bold;
+    margin-bottom: 25px;
+    color: white;
+}
+
+.catalog-list {
+    list-style: none;
+}
+.catalog-list a {
+    width: 180px;
+    color: black;
+    text-decoration: none;
+    font-family: georgia;
+
+}
+
+.catalog-list li {
+    background: black;
+    padding: 10px;
+    font-size: 15px;
+    font-family: georgia;
+    background: white;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.3s;
+
+}
+
+.catalog-list li:hover {
+    background: #66a3ff;
+}
+
+
+
+/* 🔹 Основной контент */
+.content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.big-boxes {
+    display: flex;
+    gap: 5px;
+
+}
+
+
+.small-boxes {
+    display: flex;
+    gap: 5px;
+}
+
+.small-box {
+    flex: 1;
+    height: 180px;
+    background: #0d3059;
+    border-radius: 5px;
+}
+
+/* 🔹 Подвал */
+.footer {
+    color: white;
+    background: #004080;
+    height: 130px;
+    padding: 10px;
+    font-size: 17px;
+    text-align: left;
+    margin-top: 5px;
+
+}
+
+.social-links a {
+    text-decoration: none;
+    color: white;
+    font-family: georgia;
+    font-size: 20px;
+}
+/* Описание товара */
+.products {
+    font-size: 17px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.product {
+     font-family: georgia;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+}
+
+.product img {
+    width: 250px;
+     height: 230px;
+    max-width: 600px;
+    transition: transform 0.3s ease;
+    gap: 5px;
+     margin-bottom: 10px;
+}
+
+.product:hover img {
+    transform: scale(1.1);
+}
+
+.product-description {
+    position: absolute;
+    font-family: georgia;
+    top: 10px; 
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(66, 66, 66, 0.8);
+    color: white;
+    padding: 10px;
+    border-radius: 3px;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    width: 90%;
+    text-align: center;
+    transform: translateX(-50%) translateY(-10px); /* Поднимаем немного вверх */
+    pointer-events: none;
+    gap: 10px;
+}
+
+.product:hover .product-description {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+/* кнопки в корзину и понравивщиеся */
+button {
+    font-size: 16px; /* Увеличил размер шрифта */
+    padding: 5px 10px; /* Увеличил внутренние отступы */
+    border-radius: 10px; /* Сделал кнопки более округлыми */
+    border: none;
+    background-color: #0d3059; /* Цвет можно поменять на свой */
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    font-family: georgia;
+
+}
+
+button:hover {
+    background-color: #002a6b;
+    transform: scale(1.05); /* Немного увеличивается при наведении */
+}
+
+/* кнопка на главную */
+.menu-btton {
+     flex: 1;
+    background: #436a98;
+    color: white;
+    border: none;
+    padding: 8px 5px;
+    font-size: 15px;
+    font-family: georgia;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background 0.3s ease;
+    text-align: center;
+    text-decoration: none;
+    
+}
+
+/* ПУНКТЫ КАТАЛОГА */
+  body {
+    font-family: georgi, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.telo {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.tovar-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 колонки */
+    gap: 20px;
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto; /* Центрирование контейнера */
+}
+
+.tovar {
+    position: relative;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.tovar img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.descr {
+     font-family: georgi;
+      font-size: 20px;
+    position: absolute;
+    top: 100%; /* Скрыто по умолчанию */
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    transition: top 0.3s ease;
+}
+
+.tovar:hover .descr {
+    top: 0; /* При наведении описание появляется */
+}
+
+.tovar-name,
+.price,
+.actions {
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.9); /* Белый фон для элементов */
+    border-radius: 5px;
+}
+
+.tovar-name {
+     font-family: georgi;
+    font-size: 23px;
+    font-weight: bold;
+    color: #333;
+     margin-bottom: -11px; /* Отступ между названием и ценой */
+}
+
+.price {
+    font-size: 20px;
+    color: red;
+    font-family: georgi;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.actions button {
+    padding: 8px 12px;
+    border: none;
+    background-color: #ff6347;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.actions button:hover {
+    background-color: #e53e3e;
+}
+
