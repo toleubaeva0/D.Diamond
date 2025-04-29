@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Чехлы</title>
+    <link rel="stylesheet" href="styles.css">
+    
+   
+</head>
+<body>
+    <header class="header" style="background: url('https://www.krea.ai/api/img?f=webp&i=https%3A%2F%2Ftest1-emgndhaqd0c9h2db.a01.azurefd.net%2Fimages%2F7ba534cc-5c77-4f5c-b13d-2178cb8a93f3.png') no-repeat center center; background-size: cover;">
+        <div class="logo">
+            <img src="https://i.postimg.cc/ZRj61FVv/1.png" alt="Логотип" class="logo-image" style="width: 130px; height: auto;">
+        </div>
+        <div class="icons">
+    <a href="wishlist.html" class="icon-button" id="heart-btn">❤️</a>
+    <a href="cart.html" class="icon-button" id="cart-btn">🛒</a>
+</div>
+        <!-- поиск -->
+         <div class="search-container" style="margin-left: auto; display: flex; align-items: center; margin-right: 190px;">
+            <input type="text" id="searchInput" placeholder="Поиск товаров..." onkeyup="searchProducts()" style="padding: 8px; width: 200px; font-size: 16px;">
+</div>
+    </header>
+
+    <nav class="menu">
+        <a href="index.html" class="menu-btton">На главную</a>
+    </nav>
+
+    <!-- Контейнер основного контента -->
+    <main>
+        <h2 style="text-align: center; font-family: georgia, sans-serif; font-size: 20px; margin-top: 10px;margin-bottom: 10px;">ЧЕХЛЫ</h2>
+
+        <div class="tovar-container">
+            <div class="tovar">
+                <img src="https://ltdfoto.ru/images/2025/04/18/WhatsApp-Image-2025-04-18-at-20.28.33-1.jpg" alt="Чехол 1">
+                <div class="tovar-name">«Сердце природы»</div>
+                <div class="price">99.990₸</div>
+                <div class="descr">
+                    <p>Природный чехол с мотивами листьев и камней — гармония и стиль в одном.</p>
+                </div>
+                <button onclick="addToCart('«Сердце природы»', '99.990₸','https://ltdfoto.ru/images/2025/04/18/WhatsApp-Image-2025-04-18-at-20.28.33-1.jpg')">🛒 В корзину</button>
+        <button onclick="addToWishlist('«Сердце природы»', '99.990₸','https://ltdfoto.ru/images/2025/04/18/WhatsApp-Image-2025-04-18-at-20.28.33-1.jpg')">❤️ В избранное</button>
+            </div>
+        
+            <div class="tovar">
+                <img src="https://ltdfoto.ru/images/2025/04/18/WhatsApp-Image-2025-04-18-at-20.28.33.jpg" alt="Чехол 2">
+                <div class="tovar-name">«Сад света» </div>
+                <div class="price">69.990₸</div>
+                <div class="descr">
+                    <p>Чехол с цветочным сиянием — словно солнечный сад у тебя в руках.</p>
+                </div>
+                <button onclick="addToCart('«Сад света» ', '69.990₸','https://ltdfoto.ru/images/2025/04/18/WhatsApp-Image-2025-04-18-at-20.28.33.jpg')">🛒 В корзину</button>
+        <button onclick="addToWishlist('«Сад света» ', '69.990₸','https://ltdfoto.ru/images/2025/04/18/WhatsApp-Image-2025-04-18-at-20.28.33.jpg')">❤️ В избранное</button>
+            </div>
+        
+            <div class="tovar">
+                <img src="https://ltdfoto.ru/images/2025/04/18/WhatsApp-Image-2025-04-18-at-20.28.32-2.jpg" alt="Серьги 3">
+                <div class="tovar-name">«Веточка мечты»</div>
+                <div class="price">79.990₸</div>
+                <div class="descr">
+                    <p>Чехол с изящным растительным узором, словно вдохновлённый лесной сказкой.</p>
+                </div>
+                <button onclick="addToCart('«Веточка мечты»', '79.990₸','https://ltdfoto.ru/images/2025/04/18/WhatsApp-Image-2025-04-18-at-20.28.32-2.jpg')">🛒 В корзину</button>
+        <button onclick="addToWishlist('«Веточка мечты»', '79.990₸','https://ltdfoto.ru/images/2025/04/18/WhatsApp-Image-2025-04-18-at-20.28.32-2.jpg')">❤️ В избранное</button>
+            </div>
+        
+            <div class="tovar">
+                <img src="https://ltdfoto.ru/images/2025/04/18/WhatsApp-Image-2025-04-18-at-20.28.32-1.jpg" alt="Чехол 4">
+                <div class="tovar-name">«След радуги»</div>
+                <div class="price">79.990₸</div>
+                <div class="descr">
+                    <p>Цветной чехол с переливами — будто радуга оставила след на ладони.</p>
+                </div>
+                <button onclick="addToCart('«След радуги»', '79.990₸','https://ltdfoto.ru/images/2025/04/18/WhatsApp-Image-2025-04-18-at-20.28.32-1.jpg')">🛒 В корзину</button>
+        <button onclick="addToWishlist('«След радуги»', '79.990₸','https://ltdfoto.ru/images/2025/04/18/WhatsApp-Image-2025-04-18-at-20.28.32-1.jpg')">❤️ В избранное</button>
+            </div>
+
+            <!-- Второй ряд товаров -->
+            <div class="tovar">
+                <img src="https://ltdfoto.ru/images/2025/04/18/WhatsApp-Image-2025-04-18-at-20.28.32.jpg" alt="Чехол 5">
+                <div class="tovar-name">«Кристал»</div>
+                <div class="price">69.990₸</div>
+                <div class="descr">
+                    <p>Чехол с кристальным блеском — акцент на утончённость и уверенность.</p>
+                </div>
+                <button onclick="addToCart('«Кристал»', '69.990₸','https://ltdfoto.ru/images/2025/04/18/WhatsApp-Image-2025-04-18-at-20.28.32.jpg')">🛒 В корзину</button>
+        <button onclick="addToWishlist('«Кристал»', '69.990₸','https://ltdfoto.ru/images/2025/04/18/WhatsApp-Image-2025-04-18-at-20.28.32.jpg">❤️ В избранное</button>
+            </div>
+
+            <div class="tovar">
+                <img src="https://ltdfoto.ru/images/2025/04/18/WhatsApp-Image-2025-04-18-at-20.28.31-2.jpg" alt="Чехол 6">
+                <div class="tovar-name">«Аура»</div>
+                <div class="price">89.990₸</div>
+                <div class="descr">
+                    <p>Нежный чехол, излучающий мягкое свечение — твоя личная энергетика в деталях.</p>
+                </div>
+                <button onclick="addToCart('«Аура»', '89.990₸','https://ltdfoto.ru/images/2025/04/18/WhatsApp-Image-2025-04-18-at-20.28.31-2.jpg')">🛒 В корзину</button>
+        <button onclick="addToWishlist('«Аура»', '89.990₸','https://ltdfoto.ru/images/2025/04/18/WhatsApp-Image-2025-04-18-at-20.28.31-2.jpg')">❤️ В избранное</button>
+            </div>
+
+            <div class="tovar">
+                <img src="https://ltdfoto.ru/images/2025/04/18/WhatsApp-Image-2025-04-18-at-20.28.31-1.jpg" alt="Чехол 7">
+                <div class="tovar-name">«Грани блеска»</div>
+                <div class="price">89.990₸</div>
+                <div class="descr">
+                    <p>Элегантный чехол с сияющими гранями для яркого и стильного образа.</p>
+                </div>
+                <button onclick="addToCart('«Грани блеска»', '89.990₸','https://ltdfoto.ru/images/2025/04/18/WhatsApp-Image-2025-04-18-at-20.28.31-1.jpg')">🛒 В корзину</button>
+        <button onclick="addToWishlist('«Грани блеска»', '89.990₸','https://ltdfoto.ru/images/2025/04/18/WhatsApp-Image-2025-04-18-at-20.28.31-1.jpg')">❤️ В избранное</button>
+            </div>
+
+            <div class="tovar">
+                <img src="https://ltdfoto.ru/images/2025/04/18/WhatsApp-Image-2025-04-18-at-20.28.31.jpg" alt="Чехол 8">
+                <div class="tovar-name">«Магия граней» </div>
+                <div class="price">99.990₸</div>
+                <div class="descr">
+                    <p>Чехол, в котором каждая грань сверкает волшебным светом и тайной.</p>
+                </div>
+                <button onclick="addToCart('«Магия граней» ', '99.990₸','https://ltdfoto.ru/images/2025/04/18/WhatsApp-Image-2025-04-18-at-20.28.31.jpg')">🛒 В корзину</button>
+        <button onclick="addToWishlist('«Магия граней» ', '99.990₸','https://ltdfoto.ru/images/2025/04/18/WhatsApp-Image-2025-04-18-at-20.28.31.jpg')">❤️ В избранное</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer" style="background: url('https://www.krea.ai/api/img?f=webp&i=https%3A%2F%2Ftest1-emgndhaqd0c9h2db.a01.azurefd.net%2Fimages%2F7ba534cc-5c77-4f5c-b13d-2178cb8a93f3.png') no-repeat center center; background-size: cover;">
+        <div class="social-links" style="display: flex; flex-direction: column; gap: 10px;">
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" width="30">
+                <a href="https://www.instagram.com/danaa_to" target="_blank">D_Diamond</a>
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="30">
+                <a href="https://wa.me/870066688904" target="_blank">87052146155</a>
+            </div>
+           
+<div style="display: flex; align-items: center; gap: 15px;">
+            <img src="https://i.postimg.cc/ZRj61FVv/1.png" alt="WhatsApp" width="30">
+            <a href="history.html" target="_blank">История создания</a>
+        </div>
+</footer>
+
+<script>
+        function addToCart(name, price, img) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ name, price, img });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert('Товар добавлен в корзину!');
+        }
+        
+        function addToWishlist(name, price, img) {
+            let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+            wishlist.push({ name, price, img });
+            localStorage.setItem('wishlist', JSON.stringify(wishlist));
+            alert('Товар добавлен в избранное!');
+        }
+        
+         // поиск
+        function searchProducts() {
+    const query = document.getElementById("searchInput").value.toLowerCase();
+    const products = document.querySelectorAll(".tovar");
+
+    products.forEach(product => {
+        const name = product.querySelector(".tovar-name").textContent.toLowerCase();
+        const description = product.querySelector(".descr").textContent.toLowerCase();
+
+        if (name.includes(query) || description.includes(query)) {
+            product.style.display = "block";
+        } else {
+            product.style.display = "none";
+        }
+    });
+}
+
+    </script>

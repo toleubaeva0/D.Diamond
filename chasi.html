@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Часы</title>
+    <link rel="stylesheet" href="styles.css">
+    
+   
+</head>
+<body>
+    <header class="header" style="background: url('https://www.krea.ai/api/img?f=webp&i=https%3A%2F%2Ftest1-emgndhaqd0c9h2db.a01.azurefd.net%2Fimages%2F7ba534cc-5c77-4f5c-b13d-2178cb8a93f3.png') no-repeat center center; background-size: cover;">
+        <div class="logo">
+            <img src="https://i.postimg.cc/ZRj61FVv/1.png" alt="Логотип" class="logo-image" style="width: 130px; height: auto;">
+        </div>
+        <div class="icons">
+    <a href="wishlist.html" class="icon-button" id="heart-btn">❤️</a>
+    <a href="cart.html" class="icon-button" id="cart-btn">🛒</a>
+</div>
+        <!-- поиск -->
+         <div class="search-container" style="margin-left: auto; display: flex; align-items: center; margin-right: 190px;">
+            <input type="text" id="searchInput" placeholder="Поиск товаров..." onkeyup="searchProducts()" style="padding: 8px; width: 200px; font-size: 16px;">
+</div>
+    </header>
+
+    <nav class="menu">
+        <a href="index.html" class="menu-btton">На главную</a>
+    </nav>
+
+    <!-- Контейнер основного контента -->
+    <main>
+        <h2 style="text-align: center; font-family: georgia, sans-serif; font-size: 20px; margin-top: 10px;margin-bottom: 10px;">ЧАСЫ</h2>
+
+        <div class="tovar-container">
+            <div class="tovar">
+                <img src="https://www.krea.ai/api/img?f=webp&i=https%3A%2F%2Ftest1-emgndhaqd0c9h2db.a01.azurefd.net%2Fimages%2F036ecbb1-ac44-4af2-8fe9-1a4ff573312b.png" alt="Часы 1">
+                <div class="tovar-name">«Радужный миг»</div>
+                <div class="price">139.990₸</div>
+                <div class="descr">
+                    <p>Часы с яркими оттенками, которые создают атмосферу радости и лёгкости.</p>
+                </div>
+                <button onclick="addToCart('«Радужный миг»', '139.990₸','https://www.krea.ai/api/img?f=webp&i=https%3A%2F%2Ftest1-emgndhaqd0c9h2db.a01.azurefd.net%2Fimages%2F036ecbb1-ac44-4af2-8fe9-1a4ff573312b.png')">🛒 В корзину</button>
+        <button onclick="addToWishlist('«Радужный миг»', '139.990₸','https://www.krea.ai/api/img?f=webp&i=https%3A%2F%2Ftest1-emgndhaqd0c9h2db.a01.azurefd.net%2Fimages%2F036ecbb1-ac44-4af2-8fe9-1a4ff573312b.png')">❤️ В избранное</button>
+            </div>
+        
+            <div class="tovar">
+                <img src="https://www.krea.ai/api/img?f=webp&i=https%3A%2F%2Ftest1-emgndhaqd0c9h2db.a01.azurefd.net%2Fimages%2Ffdb9ccc3-3eaa-497c-ad32-5385f60eb149.png&s=512" alt="Часы 2">
+                <div class="tovar-name">«Игра красок» </div>
+                <div class="price">129.990₸</div>
+                <div class="descr">
+                    <p>Цветные часы, собравшие в себе множество ярких оттенков и настроений</p>
+                </div>
+                <button onclick="addToCart('«Игра красок» ', '129.990₸','https://www.krea.ai/api/img?f=webp&i=https%3A%2F%2Ftest1-emgndhaqd0c9h2db.a01.azurefd.net%2Fimages%2Ffdb9ccc3-3eaa-497c-ad32-5385f60eb149.png&s=512')">🛒 В корзину</button>
+        <button onclick="addToWishlist('«Игра красок» ', '129.990₸','https://www.krea.ai/api/img?f=webp&i=https%3A%2F%2Ftest1-emgndhaqd0c9h2db.a01.azurefd.net%2Fimages%2Ffdb9ccc3-3eaa-497c-ad32-5385f60eb149.png&s=512')">❤️ В избранное</button>
+            </div>
+        
+            <div class="tovar">
+                <img src="https://www.krea.ai/api/img?f=webp&i=https%3A%2F%2Ftest1-emgndhaqd0c9h2db.a01.azurefd.net%2Fimages%2Fc033140c-8271-4a3e-b298-4dfd551c71c4.png" alt="Часы 3">
+                <div class="tovar-name">«Палитра времени»</div>
+                <div class="price">139.990₸</div>
+                <div class="descr">
+                    <p>Часы, где цвета встречаются в интересном сочетании, подчеркивая стиль.</p>
+                </div>
+                <button onclick="addToCart('«Палитра времени»', '139.990₸','https://www.krea.ai/api/img?f=webp&i=https%3A%2F%2Ftest1-emgndhaqd0c9h2db.a01.azurefd.net%2Fimages%2Fc033140c-8271-4a3e-b298-4dfd551c71c4.png')">🛒 В корзину</button>
+        <button onclick="addToWishlist('«Палитра времени»', '139.990₸','https://www.krea.ai/api/img?f=webp&i=https%3A%2F%2Ftest1-emgndhaqd0c9h2db.a01.azurefd.net%2Fimages%2Fc033140c-8271-4a3e-b298-4dfd551c71c4.png')">❤️ В избранное</button>
+            </div>
+        
+            <div class="tovar">
+                <img src="https://www.krea.ai/api/img?f=webp&i=https%3A%2F%2Ftest1-emgndhaqd0c9h2db.a01.azurefd.net%2Fimages%2Fd0d3efc4-18a5-4564-b5ba-fc3935af389c.png" alt="Часы 4">
+                <div class="tovar-name">«Глубина океана»</div>
+                <div class="price">119.990₸</div>
+                <div class="descr">
+                    <p>Синие часы, погружающие в безбрежное спокойствие морских глубин.</p>
+                </div>
+                <button onclick="addToCart('«Глубина океана»', '199.990₸','https://www.krea.ai/api/img?f=webp&i=https%3A%2F%2Ftest1-emgndhaqd0c9h2db.a01.azurefd.net%2Fimages%2Fd0d3efc4-18a5-4564-b5ba-fc3935af389c.png')">🛒 В корзину</button>
+        <button onclick="addToWishlist('«Глубина океана»', '199.990₸','https://www.krea.ai/api/img?f=webp&i=https%3A%2F%2Ftest1-emgndhaqd0c9h2db.a01.azurefd.net%2Fimages%2Fd0d3efc4-18a5-4564-b5ba-fc3935af389c.png')">❤️ В избранное</button>
+            </div>
+
+            <!-- Второй ряд товаров -->
+            <div class="tovar">
+                <img src="https://www.krea.ai/api/img?f=webp&i=https%3A%2F%2Ftest1-emgndhaqd0c9h2db.a01.azurefd.net%2Fimages%2F0adb7997-26d1-4c5c-aff2-aebbf04b0921.png" alt="Часы 5">
+                <div class="tovar-name">«Тень времени»</div>
+                <div class="price">99.990₸</div>
+                <div class="descr">
+                    <p>Часы, в которых тьма становится элегантной и загадочной.</p>
+                </div>
+                <button onclick="addToCart('«Тень времени»', '99.990₸','https://www.krea.ai/api/img?f=webp&i=https%3A%2F%2Ftest1-emgndhaqd0c9h2db.a01.azurefd.net%2Fimages%2F0adb7997-26d1-4c5c-aff2-aebbf04b0921.png')">🛒 В корзину</button>
+        <button onclick="addToWishlist('«Тень времени»', '99.990₸','https://www.krea.ai/api/img?f=webp&i=https%3A%2F%2Ftest1-emgndhaqd0c9h2db.a01.azurefd.net%2Fimages%2F0adb7997-26d1-4c5c-aff2-aebbf04b0921.png">❤️ В избранное</button>
+            </div>
+
+            <div class="tovar">
+                <img src="https://www.krea.ai/api/img?f=webp&i=https%3A%2F%2Ftest1-emgndhaqd0c9h2db.a01.azurefd.net%2Fimages%2Fb8e7f69e-3718-46a9-bd1d-cf8927ac58e2.png" alt="Часы 6">
+                <div class="tovar-name">«Ночной взгляд»</div>
+                <div class="price">89.990₸</div>
+                <div class="descr">
+                    <p>Сдержанность и стиль в одном — черные часы для уверенных в себе.</p>
+                </div>
+                <button onclick="addToCart('«Ночной взгляд»', '89.990₸','https://www.krea.ai/api/img?f=webp&i=https%3A%2F%2Ftest1-emgndhaqd0c9h2db.a01.azurefd.net%2Fimages%2Fb8e7f69e-3718-46a9-bd1d-cf8927ac58e2.png')">🛒 В корзину</button>
+        <button onclick="addToWishlist('«Ночной взгляд»', '89.990₸','https://www.krea.ai/api/img?f=webp&i=https%3A%2F%2Ftest1-emgndhaqd0c9h2db.a01.azurefd.net%2Fimages%2Fb8e7f69e-3718-46a9-bd1d-cf8927ac58e2.png')">❤️ В избранное</button>
+            </div>
+
+            <div class="tovar">
+                <img src="https://www.krea.ai/api/img?f=webp&i=https%3A%2F%2Ftest1-emgndhaqd0c9h2db.a01.azurefd.net%2Fimages%2Ff5dd0753-348f-40c9-83ea-ef2419450a63.png" alt="Часы 7">
+                <div class="tovar-name">«Чёрная бездна»</div>
+                <div class="price">89.990₸</div>
+                <div class="descr">
+                    <p>Часы, в которых сочетаются сила тьмы и красота минимализма.</p>
+                </div>
+                <button onclick="addToCart('«Чёрная бездна»', '89.990₸','https://www.krea.ai/api/img?f=webp&i=https%3A%2F%2Ftest1-emgndhaqd0c9h2db.a01.azurefd.net%2Fimages%2Ff5dd0753-348f-40c9-83ea-ef2419450a63.png')">🛒 В корзину</button>
+        <button onclick="addToWishlist('«Чёрная бездна»', '89.990₸','https://www.krea.ai/api/img?f=webp&i=https%3A%2F%2Ftest1-emgndhaqd0c9h2db.a01.azurefd.net%2Fimages%2Ff5dd0753-348f-40c9-83ea-ef2419450a63.png')">❤️ В избранное</button>
+            </div>
+
+            <div class="tovar">
+                <img src="https://www.krea.ai/api/img?f=webp&i=https%3A%2F%2Ftest1-emgndhaqd0c9h2db.a01.azurefd.net%2Fimages%2F2527eef4-d595-4174-8105-f0a8665c81e5.png" alt="Часы 8">
+                <div class="tovar-name">«Синий шторм» </div>
+                <div class="price">99.990₸</div>
+                <div class="descr">
+                    <p>Энергичные и решительные синие часы для смелых и уверенных.</p>
+                </div>
+                <button onclick="addToCart('«Синий шторм» ', '99.990₸','https://www.krea.ai/api/img?f=webp&i=https%3A%2F%2Ftest1-emgndhaqd0c9h2db.a01.azurefd.net%2Fimages%2F2527eef4-d595-4174-8105-f0a8665c81e5.png')">🛒 В корзину</button>
+        <button onclick="addToWishlist('«Синий шторм» ', '99.990₸','https://www.krea.ai/api/img?f=webp&i=https%3A%2F%2Ftest1-emgndhaqd0c9h2db.a01.azurefd.net%2Fimages%2F2527eef4-d595-4174-8105-f0a8665c81e5.png')">❤️ В избранное</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer" style="background: url('https://www.krea.ai/api/img?f=webp&i=https%3A%2F%2Ftest1-emgndhaqd0c9h2db.a01.azurefd.net%2Fimages%2F7ba534cc-5c77-4f5c-b13d-2178cb8a93f3.png') no-repeat center center; background-size: cover;">
+        <div class="social-links" style="display: flex; flex-direction: column; gap: 10px;">
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" width="30">
+                <a href="https://www.instagram.com/danaa_to" target="_blank">D_Diamond</a>
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="30">
+                <a href="https://wa.me/870066688904" target="_blank">87052146155</a>
+            </div>
+           
+<div style="display: flex; align-items: center; gap: 15px;">
+            <img src="https://i.postimg.cc/ZRj61FVv/1.png" alt="WhatsApp" width="30">
+            <a href="history.html" target="_blank">История создания</a>
+        </div>
+</footer>
+
+<script>
+        function addToCart(name, price, img) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ name, price, img });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert('Товар добавлен в корзину!');
+        }
+        
+        function addToWishlist(name, price, img) {
+            let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+            wishlist.push({ name, price, img });
+            localStorage.setItem('wishlist', JSON.stringify(wishlist));
+            alert('Товар добавлен в избранное!');
+        }
+        
+         // поиск
+        function searchProducts() {
+    const query = document.getElementById("searchInput").value.toLowerCase();
+    const products = document.querySelectorAll(".tovar");
+
+    products.forEach(product => {
+        const name = product.querySelector(".tovar-name").textContent.toLowerCase();
+        const description = product.querySelector(".descr").textContent.toLowerCase();
+
+        if (name.includes(query) || description.includes(query)) {
+            product.style.display = "block";
+        } else {
+            product.style.display = "none";
+        }
+    });
+}
+
+    </script>

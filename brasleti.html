@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Браслеты</title>
+    <link rel="stylesheet" href="styles.css">
+    
+   
+</head>
+<body>
+    <header class="header" style="background: url('https://www.krea.ai/api/img?f=webp&i=https%3A%2F%2Ftest1-emgndhaqd0c9h2db.a01.azurefd.net%2Fimages%2F7ba534cc-5c77-4f5c-b13d-2178cb8a93f3.png') no-repeat center center; background-size: cover;">
+        <div class="logo">
+            <img src="https://i.postimg.cc/ZRj61FVv/1.png" alt="Логотип" class="logo-image" style="width: 130px; height: auto;">
+        </div>
+        <div class="icons">
+    <a href="wishlist.html" class="icon-button" id="heart-btn">❤️</a>
+    <a href="cart.html" class="icon-button" id="cart-btn">🛒</a>
+</div>
+        <!-- поиск -->
+         <div class="search-container" style="margin-left: auto; display: flex; align-items: center; margin-right: 190px;">
+            <input type="text" id="searchInput" placeholder="Поиск товаров..." onkeyup="searchProducts()" style="padding: 8px; width: 200px; font-size: 16px;">
+</div>
+    </header>
+
+    <nav class="menu">
+        <a href="index.html" class="menu-btton">На главную</a>
+    </nav>
+
+    <!-- Контейнер основного контента -->
+    <main>
+        <h2 style="text-align: center; font-family: georgia, sans-serif; font-size: 20px; margin-top: 10px;margin-bottom: 10px;">БРАСЛЕТЫ</h2>
+
+        <div class="tovar-container">
+            <div class="tovar">
+                <img src="https://www.krea.ai/api/img?f=webp&i=https%3A%2F%2Ftest1-emgndhaqd0c9h2db.a01.azurefd.net%2Fimages%2F18a2a3df-6fda-4fce-9974-6429445c8929.png" alt="Браслет 1">
+                <div class="tovar-name">«Ледяной блеск»</div>
+                <div class="price">179.990₸</div>
+                <div class="descr">
+                    <p>Тихая роскошь — гладкий браслет с приглушённым холодным блеском.</p>
+                </div>
+                <button onclick="addToCart('«Ледяной блеск»', '179.990₸','https://www.krea.ai/api/img?f=webp&i=https%3A%2F%2Ftest1-emgndhaqd0c9h2db.a01.azurefd.net%2Fimages%2F18a2a3df-6fda-4fce-9974-6429445c8929.png')">🛒 В корзину</button>
+        <button onclick="addToWishlist('«Ледяной блеск»', '179.990₸','https://www.krea.ai/api/img?f=webp&i=https%3A%2F%2Ftest1-emgndhaqd0c9h2db.a01.azurefd.net%2Fimages%2F18a2a3df-6fda-4fce-9974-6429445c8929.png')">❤️ В избранное</button>
+            </div>
+        
+            <div class="tovar">
+                <img src="https://www.krea.ai/api/img?f=webp&i=https%3A%2F%2Ftest1-emgndhaqd0c9h2db.a01.azurefd.net%2Fimages%2F9ae04665-3cf6-40b9-b918-4b09b166a39a.png" alt="Браслет 2">
+                <div class="tovar-name">«Лунный браслет» </div>
+                <div class="price">169.990₸</div>
+                <div class="descr">
+                    <p>Изящный браслет с ледяным отблеском — для особых моментов.</p>
+                </div>
+                <button onclick="addToCart('«Лунный браслет» ', '169.990₸','https://www.krea.ai/api/img?f=webp&i=https%3A%2F%2Ftest1-emgndhaqd0c9h2db.a01.azurefd.net%2Fimages%2F9ae04665-3cf6-40b9-b918-4b09b166a39a.png')">🛒 В корзину</button>
+        <button onclick="addToWishlist('«Лунный браслет» ', '169.990₸','https://www.krea.ai/api/img?f=webp&i=https%3A%2F%2Ftest1-emgndhaqd0c9h2db.a01.azurefd.net%2Fimages%2F9ae04665-3cf6-40b9-b918-4b09b166a39a.png')">❤️ В избранное</button>
+            </div>
+        
+            <div class="tovar">
+                <img src="https://www.krea.ai/api/img?f=webp&i=https%3A%2F%2Ftest1-emgndhaqd0c9h2db.a01.azurefd.net%2Fimages%2Fa859cf07-802b-4315-9979-69484d2d2d5b.png" alt="Браслет 3">
+                <div class="tovar-name">«Молочный лёд»</div>
+                <div class="price">159.990₸</div>
+                <div class="descr">
+                    <p>Белое золото играет светом, создавая ощущение свежести и утончённости.</p>
+                </div>
+                <button onclick="addToCart('«Молочный лёд»', '159.990₸','https://www.krea.ai/api/img?f=webp&i=https%3A%2F%2Ftest1-emgndhaqd0c9h2db.a01.azurefd.net%2Fimages%2Fa859cf07-802b-4315-9979-69484d2d2d5b.png')">🛒 В корзину</button>
+        <button onclick="addToWishlist('«Молочный лёд»', '159.990₸','https://www.krea.ai/api/img?f=webp&i=https%3A%2F%2Ftest1-emgndhaqd0c9h2db.a01.azurefd.net%2Fimages%2Fa859cf07-802b-4315-9979-69484d2d2d5b.png')">❤️ В избранное</button>
+            </div>
+        
+            <div class="tovar">
+                <img src="https://www.krea.ai/api/img?f=webp&i=https%3A%2F%2Ftest1-emgndhaqd0c9h2db.a01.azurefd.net%2Fimages%2F3633ecfa-a58b-479b-bc4c-c100cb136d0a.png" alt="Браслет 4">
+                <div class="tovar-name">«Гладь света»</div>
+                <div class="price">169.990₸</div>
+                <div class="descr">
+                    <p>Холодное сияние и чистая элегантность в каждой линии браслета.</p>
+                </div>
+                <button onclick="addToCart('«Гладь света»', '169.990₸','https://www.krea.ai/api/img?f=webp&i=https%3A%2F%2Ftest1-emgndhaqd0c9h2db.a01.azurefd.net%2Fimages%2F3633ecfa-a58b-479b-bc4c-c100cb136d0a.png')">🛒 В корзину</button>
+        <button onclick="addToWishlist('«Гладь света»', '169.990₸','https://www.krea.ai/api/img?f=webp&i=https%3A%2F%2Ftest1-emgndhaqd0c9h2db.a01.azurefd.net%2Fimages%2F3633ecfa-a58b-479b-bc4c-c100cb136d0a.png')">❤️ В избранное</button>
+            </div>
+
+            <!-- Второй ряд товаров -->
+            <div class="tovar">
+                <img src="https://www.krea.ai/api/img?f=webp&i=https%3A%2F%2Ftest1-emgndhaqd0c9h2db.a01.azurefd.net%2Fimages%2Ff07209d5-b1e1-4481-8020-6c4ca6ab9df4.png" alt="Браслет 5">
+                <div class="tovar-name">«Золотой ритм»</div>
+                <div class="price">199.990₸</div>
+                <div class="descr">
+                    <p>Браслет с идеально ровной поверхностью, сияющей благородным блеском.</p>
+                </div>
+                <button onclick="addToCart('«Золотой ритм»', '199.990₸','https://www.krea.ai/api/img?f=webp&i=https%3A%2F%2Ftest1-emgndhaqd0c9h2db.a01.azurefd.net%2Fimages%2Ff07209d5-b1e1-4481-8020-6c4ca6ab9df4.png')">🛒 В корзину</button>
+        <button onclick="addToWishlist('«Золотой ритм»', '199.990₸','https://www.krea.ai/api/img?f=webp&i=https%3A%2F%2Ftest1-emgndhaqd0c9h2db.a01.azurefd.net%2Fimages%2Ff07209d5-b1e1-4481-8020-6c4ca6ab9df4.png">❤️ В избранное</button>
+            </div>
+
+            <div class="tovar">
+                <img src="https://www.krea.ai/api/img?f=webp&i=https%3A%2F%2Ftest1-emgndhaqd0c9h2db.a01.azurefd.net%2Fimages%2Fc33571bb-8a11-4302-a16b-09b46ac35f84.png" alt="Браслет 6">
+                <div class="tovar-name">«Золотая коса»</div>
+                <div class="price">199.990₸</div>
+                <div class="descr">
+                    <p>Мягкий блеск золота, подчёркивающий твою нежность и женственность.</p>
+                </div>
+                <button onclick="addToCart('«Золотая коса»', '199.990₸','https://www.krea.ai/api/img?f=webp&i=https%3A%2F%2Ftest1-emgndhaqd0c9h2db.a01.azurefd.net%2Fimages%2Fc33571bb-8a11-4302-a16b-09b46ac35f84.png')">🛒 В корзину</button>
+        <button onclick="addToWishlist('«Золотая коса»', '199.990₸','https://www.krea.ai/api/img?f=webp&i=https%3A%2F%2Ftest1-emgndhaqd0c9h2db.a01.azurefd.net%2Fimages%2Fc33571bb-8a11-4302-a16b-09b46ac35f84.png')">❤️ В избранное</button>
+            </div>
+
+            <div class="tovar">
+                <img src="https://www.krea.ai/api/img?f=webp&i=https%3A%2F%2Ftest1-emgndhaqd0c9h2db.a01.azurefd.net%2Fimages%2Fe666b06c-6756-4e5f-bf52-bd00df91ed66.png" alt="Браслет 7">
+                <div class="tovar-name">«Линия роскоши»</div>
+                <div class="price">209.990₸</div>
+                <div class="descr">
+                    <p>Идеальная геометрия и тепло золота — для утончённого образа.</p>
+                </div>
+                <button onclick="addToCart('«Линия роскоши»', '209.990₸','https://www.krea.ai/api/img?f=webp&i=https%3A%2F%2Ftest1-emgndhaqd0c9h2db.a01.azurefd.net%2Fimages%2Fe666b06c-6756-4e5f-bf52-bd00df91ed66.png')">🛒 В корзину</button>
+        <button onclick="addToWishlist('«Линия роскоши»', '209.990₸','https://www.krea.ai/api/img?f=webp&i=https%3A%2F%2Ftest1-emgndhaqd0c9h2db.a01.azurefd.net%2Fimages%2Fe666b06c-6756-4e5f-bf52-bd00df91ed66.png')">❤️ В избранное</button>
+            </div>
+
+            <div class="tovar">
+                <img src="https://www.krea.ai/api/img?f=webp&i=https%3A%2F%2Ftest1-emgndhaqd0c9h2db.a01.azurefd.net%2Fimages%2Fd2712351-1a08-47e6-a172-7152dcdef982.png" alt="Браслет 8">
+                <div class="tovar-name">«Бархатное золото» </div>
+                <div class="price">219.990₸</div>
+                <div class="descr">
+                    <p>Тонкая золотая цепочка, будто луч солнца на твоей коже.</p>
+                </div>
+                <button onclick="addToCart('«Бархатное золото» ', '219.990₸','https://www.krea.ai/api/img?f=webp&i=https%3A%2F%2Ftest1-emgndhaqd0c9h2db.a01.azurefd.net%2Fimages%2Fd2712351-1a08-47e6-a172-7152dcdef982.png')">🛒 В корзину</button>
+        <button onclick="addToWishlist('«Бархатное золото» ', '219.990₸','https://www.krea.ai/api/img?f=webp&i=https%3A%2F%2Ftest1-emgndhaqd0c9h2db.a01.azurefd.net%2Fimages%2Fd2712351-1a08-47e6-a172-7152dcdef982.png')">❤️ В избранное</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer" style="background: url('https://www.krea.ai/api/img?f=webp&i=https%3A%2F%2Ftest1-emgndhaqd0c9h2db.a01.azurefd.net%2Fimages%2F7ba534cc-5c77-4f5c-b13d-2178cb8a93f3.png') no-repeat center center; background-size: cover;">
+        <div class="social-links" style="display: flex; flex-direction: column; gap: 10px;">
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" width="30">
+                <a href="https://www.instagram.com/danaa_to" target="_blank">D_Diamond</a>
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="30">
+                <a href="https://wa.me/870066688904" target="_blank">87052146155</a>
+            </div>
+           
+<div style="display: flex; align-items: center; gap: 15px;">
+            <img src="https://i.postimg.cc/ZRj61FVv/1.png" alt="WhatsApp" width="30">
+            <a href="history.html" target="_blank">История создания</a>
+        </div>
+</footer>
+
+<script>
+        function addToCart(name, price, img) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ name, price, img });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert('Товар добавлен в корзину!');
+        }
+        
+        function addToWishlist(name, price, img) {
+            let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+            wishlist.push({ name, price, img });
+            localStorage.setItem('wishlist', JSON.stringify(wishlist));
+            alert('Товар добавлен в избранное!');
+        }
+        
+         // поиск
+        function searchProducts() {
+    const query = document.getElementById("searchInput").value.toLowerCase();
+    const products = document.querySelectorAll(".tovar");
+
+    products.forEach(product => {
+        const name = product.querySelector(".tovar-name").textContent.toLowerCase();
+        const description = product.querySelector(".descr").textContent.toLowerCase();
+
+        if (name.includes(query) || description.includes(query)) {
+            product.style.display = "block";
+        } else {
+            product.style.display = "none";
+        }
+    });
+}
+
+    </script>

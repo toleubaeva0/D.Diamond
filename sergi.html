@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Серьги</title>
+    <link rel="stylesheet" href="styles.css">
+    
+   
+</head>
+<body>
+    <header class="header" style="background: url('https://www.krea.ai/api/img?f=webp&i=https%3A%2F%2Ftest1-emgndhaqd0c9h2db.a01.azurefd.net%2Fimages%2F7ba534cc-5c77-4f5c-b13d-2178cb8a93f3.png') no-repeat center center; background-size: cover;">
+        <div class="logo">
+            <img src="https://i.postimg.cc/ZRj61FVv/1.png" alt="Логотип" class="logo-image" style="width: 130px; height: auto;">
+        </div>
+        <div class="icons">
+    <a href="wishlist.html" class="icon-button" id="heart-btn">❤️</a>
+    <a href="cart.html" class="icon-button" id="cart-btn">🛒</a>
+</div>
+<!-- поиск -->
+         <div class="search-container" style="margin-left: auto; display: flex; align-items: center; margin-right: 190px;">
+            <input type="text" id="searchInput" placeholder="Поиск товаров..." onkeyup="searchProducts()" style="padding: 8px; width: 200px; font-size: 16px;">
+</div>
+        
+    </header>
+
+    <nav class="menu">
+        <a href="index.html" class="menu-btton">На главную</a>
+    </nav>
+
+    <!-- Контейнер основного контента -->
+    <main>
+        <h2 style="text-align: center; font-family: georgia, sans-serif; font-size: 20px; margin-top: 10px;margin-bottom: 10px;">СЕРЬГИ</h2>
+
+        <div class="tovar-container">
+            <div class="tovar">
+                <img src="https://s1.hostingkartinok.com/uploads/images/2025/04/c37389d46e5ae3fdf4ea29cb40850342.jpeg" alt="Серьги 1">
+                <div class="tovar-name">«Золотой рассвет»</div>
+                <div class="price">299.990₸</div>
+                <div class="descr">
+                    <p>Эти элегантные серьги с золотым покрытием идеально подойдут для вечерних выходов.</p>
+                </div>
+                <button onclick="addToCart('«Золотой рассвет»', '299.990₸','https://s1.hostingkartinok.com/uploads/images/2025/04/c37389d46e5ae3fdf4ea29cb40850342.jpeg')">🛒 В корзину</button>
+        <button onclick="addToWishlist('«Золотой рассвет»', '299.990₸','https://s1.hostingkartinok.com/uploads/images/2025/04/c37389d46e5ae3fdf4ea29cb40850342.jpeg')">❤️ В избранное</button>
+            </div>
+        
+            <div class="tovar">
+                <img src="https://ltdfoto.ru/images/2025/04/08/WhatsApp-Image-2025-04-08-at-23.44.15-1.jpg" alt="Серьги 2">
+                <div class="tovar-name">«Звёздная пыль»</div>
+                <div class="price">399.990₸</div>
+                <div class="descr">
+                    <p>Легкие серьгииз белого золота с вставками из страз для повседневного использования.</p>
+                </div>
+                <button onclick="addToCart('«Звёздная пыль»', '399.990₸','https://ltdfoto.ru/images/2025/04/08/WhatsApp-Image-2025-04-08-at-23.44.15-1.jpg')">🛒 В корзину</button>
+        <button onclick="addToWishlist('«Звёздная пыль»', '399.990₸','https://ltdfoto.ru/images/2025/04/08/WhatsApp-Image-2025-04-08-at-23.44.15-1.jpg')">❤️ В избранное</button>
+            </div>
+        
+            <div class="tovar">
+                <img src="https://ltdfoto.ru/images/2025/04/08/WhatsApp-Image-2025-04-08-at-23.44.16.jpg" alt="Серьги 3">
+                <div class="tovar-name">«Сияние огня»</div>
+                <div class="price">499.990₸</div>
+                <div class="descr">
+                    <p>Элегантные серьги с крупными камнями на золотой основе — идеальный выбор для особых случаев.</p>
+                </div>
+                <button onclick="addToCart('«Сияние огня»', '499.990₸','https://ltdfoto.ru/images/2025/04/08/WhatsApp-Image-2025-04-08-at-23.44.16.jpg')">🛒 В корзину</button>
+        <button onclick="addToWishlist('«Сияние огня»', '499.990₸','https://ltdfoto.ru/images/2025/04/08/WhatsApp-Image-2025-04-08-at-23.44.16.jpg')">❤️ В избранное</button>
+            </div>
+        
+            <div class="tovar">
+                <img src="https://ltdfoto.ru/images/2025/04/08/WhatsApp-Image-2025-04-08-at-23.44.16-1.jpg" alt="Серьги 4">
+                <div class="tovar-name">«Туманное утро»</div>
+                <div class="price">399.990₸</div>
+                <div class="descr">
+                    <p>Серьги с узорами, сделанные из белого золота и украшенные кристаллами.</p>
+                </div>
+                <button onclick="addToCart('«Туманное утро»', '399.990₸','https://ltdfoto.ru/images/2025/04/08/WhatsApp-Image-2025-04-08-at-23.44.16-1.jpg')">🛒 В корзину</button>
+        <button onclick="addToWishlist('«Туманное утро»', '399.990₸','https://ltdfoto.ru/images/2025/04/08/WhatsApp-Image-2025-04-08-at-23.44.16-1.jpg')">❤️ В избранное</button>
+            </div>
+
+            <!-- Второй ряд товаров -->
+            <div class="tovar">
+                <img src="https://ltdfoto.ru/images/2025/04/08/WhatsApp-Image-2025-04-08-at-23.44.17.jpg" alt="Серьги 5">
+                <div class="tovar-name">«Ночной цветок»</div>
+                <div class="price">199.990₸</div>
+                <div class="descr">
+                    <p>Деликатные серьги из золота с изящными цветочками — прекрасный акцент для нежного образа.</p>
+                </div>
+                <button onclick="addToCart('«Ночной цветок»', '199.990₸','https://ltdfoto.ru/images/2025/04/08/WhatsApp-Image-2025-04-08-at-23.44.17.jpg')">🛒 В корзину</button>
+        <button onclick="addToWishlist('«Ночной цветок»', '199.990₸','https://ltdfoto.ru/images/2025/04/08/WhatsApp-Image-2025-04-08-at-23.44.17.jpg')">❤️ В избранное</button>
+            </div>
+
+            <div class="tovar">
+                <img src="https://ltdfoto.ru/images/2025/04/08/WhatsApp-Image-2025-04-08-at-23.44.17-1.jpg" alt="Серьги 6">
+                <div class="tovar-name">«Гармония»</div>
+                <div class="price">599.990₸</div>
+                <div class="descr">
+                    <p>Утончённые серьги с яркими камнями и золотой основой, подчеркивающие вашу индивидуальность.</p>
+                </div>
+                <button onclick="addToCart('«Гармония»', '599.990₸','https://ltdfoto.ru/images/2025/04/08/WhatsApp-Image-2025-04-08-at-23.44.17-1.jpg')">🛒 В корзину</button>
+        <button onclick="addToWishlist('«Гармония»', '599.990₸','https://ltdfoto.ru/images/2025/04/08/WhatsApp-Image-2025-04-08-at-23.44.17-1.jpg')">❤️ В избранное</button>
+            </div>
+
+            <div class="tovar">
+                <img src="https://ltdfoto.ru/images/2025/04/08/WhatsApp-Image-2025-04-08-at-23.44.18.jpg" alt="Серьги 7">
+                <div class="tovar-name">«Цветение счастья»</div>
+                <div class="price">299.990₸</div>
+                <div class="descr">
+                    <p>Элегантные серьги с цветочками, выполненные из белого золота, утонченность любому наряду.</p>
+                </div>
+                <button onclick="addToCart('«Цветение счастья»', '299.990₸','https://ltdfoto.ru/images/2025/04/08/WhatsApp-Image-2025-04-08-at-23.44.18.jpg')">🛒 В корзину</button>
+        <button onclick="addToWishlist('«Цветение счастья»', '299.990₸','https://ltdfoto.ru/images/2025/04/08/WhatsApp-Image-2025-04-08-at-23.44.18.jpg')">❤️ В избранное</button>
+            </div>
+
+            <div class="tovar">
+                <img src="https://ltdfoto.ru/images/2025/04/08/WhatsApp-Image-2025-04-08-at-23.44.17-2.jpg" alt="Серьги 8">
+                <div class="tovar-name">«Капля дождя»</div>
+                <div class="price">599.990₸</div>
+                <div class="descr">
+                    <p>Серьги из золота с необычным дизайном, который привлечет внимание и выделит вас.</p>
+                </div>
+                <button onclick="addToCart('«Капля дождя»', '599.990₸','https://ltdfoto.ru/images/2025/04/08/WhatsApp-Image-2025-04-08-at-23.44.17-2.jpg')">🛒 В корзину</button>
+        <button onclick="addToWishlist('«Капля дождя»', '599.990₸','https://ltdfoto.ru/images/2025/04/08/WhatsApp-Image-2025-04-08-at-23.44.17-2.jpg')">❤️ В избранное</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer" style="background: url('https://www.krea.ai/api/img?f=webp&i=https%3A%2F%2Ftest1-emgndhaqd0c9h2db.a01.azurefd.net%2Fimages%2F7ba534cc-5c77-4f5c-b13d-2178cb8a93f3.png') no-repeat center center; background-size: cover;">
+        <div class="social-links" style="display: flex; flex-direction: column; gap: 10px;">
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" width="30">
+                <a href="https://www.instagram.com/danaa_to" target="_blank">D_Diamond</a>
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="30">
+                <a href="https://wa.me/870066688904" target="_blank">87052146155</a>
+            </div>
+           
+<div style="display: flex; align-items: center; gap: 15px;">
+            <img src="https://i.postimg.cc/ZRj61FVv/1.png" alt="WhatsApp" width="30">
+            <a href="history.html" target="_blank">История создания</a>
+        </div>
+</footer>
+
+<script>
+        function addToCart(name, price, img) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ name, price, img });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert('Товар добавлен в корзину!');
+        }
+        
+        function addToWishlist(name, price, img) {
+            let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+            wishlist.push({ name, price, img });
+            localStorage.setItem('wishlist', JSON.stringify(wishlist));
+            alert('Товар добавлен в избранное!');
+        }
+
+         // поиск
+        function searchProducts() {
+    const query = document.getElementById("searchInput").value.toLowerCase();
+    const products = document.querySelectorAll(".tovar");
+
+    products.forEach(product => {
+        const name = product.querySelector(".tovar-name").textContent.toLowerCase();
+        const description = product.querySelector(".descr").textContent.toLowerCase();
+
+        if (name.includes(query) || description.includes(query)) {
+            product.style.display = "block";
+        } else {
+            product.style.display = "none";
+        }
+    });
+}
+
+    </script>

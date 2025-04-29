@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Новинки</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+       function addToCart(name, price, img) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ name, price, img });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert('Товар добавлен в корзину!');
+        }
+        
+        function addToWishlist(name, price, img) {
+            let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+            wishlist.push({ name, price, img });
+            localStorage.setItem('wishlist', JSON.stringify(wishlist));
+            alert('Товар добавлен в избранное!');
+        }
+        // поиск
+        function searchProducts() {
+            const query = document.getElementById("searchInput").value.toLowerCase();
+            const products = document.querySelectorAll(".product");
+            
+            products.forEach(product => {
+                const name = product.querySelector("h3").textContent.toLowerCase();
+                const description = product.querySelector(".product-description").textContent.toLowerCase();
+                
+                if (name.includes(query) || description.includes(query)) {
+                    product.style.display = "block"; // Показываем товар
+                } else {
+                    product.style.display = "none"; // Скрываем товар
+                }
+            });
+        }
+    </script>
+    
+</head>
+<body>
+    <header class="header" style="background: url('https://www.krea.ai/api/img?f=webp&i=https%3A%2F%2Ftest1-emgndhaqd0c9h2db.a01.azurefd.net%2Fimages%2F7ba534cc-5c77-4f5c-b13d-2178cb8a93f3.png') no-repeat center center; background-size: cover;">
+        <div class="logo">
+            <img src="https://i.postimg.cc/ZRj61FVv/1.png" alt="Логотип" class="logo-image" style="width: 130px; height: auto;">
+        </div>
+        <div class="icons">
+            <button class="icon-button" onclick="window.open('wishlist.html', '_blank')">❤️</button>
+            <button class="icon-button" onclick="window.open('cart.html', '_blank')">🛒</button>
+        </div>
+
+        <!-- поиск -->
+         <div class="search-container" style="margin-left: auto; display: flex; align-items: center; margin-right: 190px;">
+            <input type="text" id="searchInput" placeholder="Поиск товаров..." onkeyup="searchProducts()" style="padding: 8px; width: 200px; font-size: 16px;">
+</div>
+    </header>
+
+    <nav class="menu">
+        <a href="index.html" class="menu-btton">На главную</a>
+        <link rel="stylesheet" href="styles.css">
+
+    </nav>
+    <h2 style="text-align: center; font-family: georgia, sans-serif; font-size: 20px; margin-top: 10px;margin-bottom: 10px;">НОВИНКИ</h2>
+
+    <!-- Первый ряд товаров -->
+            <div class="products" style="display: flex; justify-content: space-between; gap: 20px;">
+                <div class="product" style="flex: 1; text-align: center;">
+                    <img src="https://i.postimg.cc/FHdjnppn/Whats-App-Image-2025-03-16-at-01-02-07.jpg" alt="Серьги">
+                   <h3 style="font-family: georgia, sans-serif;">Серьги</h3>
+                    <div class="product-description">Изысканные серьги в белом золоте с изящным дизайном, украшенные крупными голубыми бриллиантами и мелкими прозрачными бриллиантами.</div>
+                    <p><strong>Цена: 1.899.990₸</strong></p>
+                    <button onclick="addToCart('Серьги', '1.899.990₸','https://i.postimg.cc/FHdjnppn/Whats-App-Image-2025-03-16-at-01-02-07.jpg')">🛒 В корзину</button>
+        <button onclick="addToWishlist('Серьги', '1.899.990₸','https://i.postimg.cc/FHdjnppn/Whats-App-Image-2025-03-16-at-01-02-07.jpg')">❤️ В избранное</button>
+                </div>
+
+                <div class="product" style="flex: 1; text-align: center;">
+                    <img src="https://i.postimg.cc/K8RNhxGf/Whats-App-Image-2025-03-16-at-01-02-07-1.jpg" alt="Ожерелье">
+                     <h3 style="font-family: georgia, sans-serif;">Ожерелье</h3>
+                    <div class="product-description">Элегантное ожерелье в белом золоте с крупным голубым бриллиантом, украшенное изящными узорами и мелкими голубыми бриллиантами создающими утончённый и роскошный вид. </div>
+                    <p><strong>Цена: 1.999.990₸</strong></p>
+                    <button onclick="addToCart('Ожерелье', '1.999.990₸','https://i.postimg.cc/K8RNhxGf/Whats-App-Image-2025-03-16-at-01-02-07-1.jpg')">🛒 В корзину</button>
+        <button onclick="addToWishlist('Ожерелье', '1.999.990₸','https://i.postimg.cc/K8RNhxGf/Whats-App-Image-2025-03-16-at-01-02-07-1.jpg')">❤️ В избранное</button>
+                </div>
+
+                <div class="product" style="flex: 1; text-align: center;">
+                    <img src="https://i.postimg.cc/RF9KhBBj/Whats-App-Image-2025-03-16-at-01-02-06-2.jpg" alt="Браслет">
+                     <h3 style="font-family: georgia, sans-serif;">Браслет</h3>
+                    <div class="product-description">Изысканный браслет в белом золоте, украшенный голубыми бриллиантами, чередующимися с прозрачными бриллиантами. Прочный и элегантный дизайн делает его идеальным аксессуаром. </div>
+                    <p><strong>Цена: 1.599.990₸</strong></p>
+                    <button onclick="addToCart('Браслет', '1.599.990₸','https://i.postimg.cc/RF9KhBBj/Whats-App-Image-2025-03-16-at-01-02-06-2.jpg')">🛒 В корзину</button>
+        <button onclick="addToWishlist('Браслет', '1.599.990₸','https://i.postimg.cc/RF9KhBBj/Whats-App-Image-2025-03-16-at-01-02-06-2.jpg')">❤️ В избранное</button>
+                </div>
+
+                <div class="product" style="flex: 1; text-align: center;">
+                    <img src="https://i.postimg.cc/Vv2NXhSx/Whats-App-Image-2025-03-16-at-01-36-23.jpg" alt="Кольцо">
+                     <h3 style="font-family: georgia, sans-serif;">Кольцо</h3>
+                    <div class="product-description">Необычное кольцо из лимонного золота с добавлением мелких камней бриллианта. И так же большого голубого бриллианта в центре. Узорчатый дизайн. </div>
+                    <p><strong>Цена: 599.990₸</strong></p>
+                    <button onclick="addToCart('Кольцо', '599.990₸','https://i.postimg.cc/Vv2NXhSx/Whats-App-Image-2025-03-16-at-01-36-23.jpg')">🛒 В корзину</button>
+    <button onclick="addToWishlist('Кольцо', '599.990₸','https://i.postimg.cc/Vv2NXhSx/Whats-App-Image-2025-03-16-at-01-36-23.jpg')">❤️ В избранное</button>
+                </div>
+            </div>
+
+            <!-- Второй ряд товаров -->
+            <div class="products" style="display: flex; justify-content: space-between; gap: 20px; margin-top: 20px;">
+                <div class="product" style="flex: 1; text-align: center;">
+                    <img src="https://i.postimg.cc/hvZd2QdB/Whats-App-Image-2025-03-16-at-01-02-06.jpg" alt="Брошь">
+                     <h3 style="font-family: georgia, sans-serif;">Брошь</h3>
+                    <div class="product-description">Элегантная брошь в белом золоте с изогнутым дизайном, украшенная голубыми бриллиантами в форме лепестков и небольшими зелёными изумрудами. </div>
+                    <p><strong>Цена: 699.990₸</strong></p>
+                     <button onclick="addToCart('Брошь', '699.990₸','https://i.postimg.cc/hvZd2QdB/Whats-App-Image-2025-03-16-at-01-02-06.jpg')">🛒 В корзину</button>
+        <button onclick="addToWishlist('Брошь', '699.990₸','https://i.postimg.cc/hvZd2QdB/Whats-App-Image-2025-03-16-at-01-02-06.jpg')">❤️ В избранное</button>
+                </div>
+
+                <div class="product" style="flex: 1; text-align: center;">
+                    <img src="https://i.postimg.cc/sxgWP41m/Whats-App-Image-2025-03-16-at-01-02-06-1.jpg" alt="Пирсинг">
+                     <h3 style="font-family: georgia, sans-serif;">Пирсинг</h3>
+                    <div class="product-description">Изысканный пирсинг в белом золоте, украшенный  голубым бриллиантом. Камень имеет нежный оттенок, а сам пирсинг выглядит элегантно и стильно.</div>
+                    <p><strong>Цена: 399.990₸</strong></p>
+                     <button onclick="addToCart('Пирсинг', '399.990₸','https://i.postimg.cc/sxgWP41m/Whats-App-Image-2025-03-16-at-01-02-06-1.jpg')">🛒 В корзину</button>
+        <button onclick="addToWishlist('Пирсинг', '399.990₸','https://i.postimg.cc/sxgWP41m/Whats-App-Image-2025-03-16-at-01-02-06-1.jpg')">❤️ В избранное</button>
+                </div>
+                <div class="product" style="flex: 1; text-align: center;">
+                    <img src="https://i.postimg.cc/sD1SvmkD/Whats-App-Image-2025-03-16-at-01-02-05.jpg" alt="Кольцо">
+                     <h3 style="font-family: georgia, sans-serif;">Кольцо</h3>
+                    <div class="product-description">Элегантное кольцо в белом золоте с крупным голубым бриллиантом, с необычным и неповторимым дизайном. Великолепный голубой бриллиант излучает яркий свет</div>
+                    <p><strong>Цена: 999.990₸</strong></p>
+                     <button onclick="addToCart('Кольцо', '999.990₸','https://i.postimg.cc/sD1SvmkD/Whats-App-Image-2025-03-16-at-01-02-05.jpg')">🛒 В корзину</button>
+        <button onclick="addToWishlist('Кольцо', '999.990₸','https://i.postimg.cc/sD1SvmkD/Whats-App-Image-2025-03-16-at-01-02-05.jpg')">❤️ В избранное</button>
+                </div>
+
+                <div class="product" style="flex: 1; text-align: center;">
+                    <img src="https://i.postimg.cc/cLRJ8Xdz/Whats-App-Image-2025-03-16-at-01-33-42.jpg" alt="Пирсинг">
+                     <h3 style="font-family: georgia, sans-serif;">Пирсинг</h3>
+                    <div class="product-description">Изящный пирсинг для пупка из белого золота с добавлением большого камня из голубого бриллианта, нежный и красивый дизайн изделия.</div>
+                    <p><strong>Цена: 499.990₸</strong></p>
+                     <button onclick="addToCart('Пирсинг', '499.990₸','https://i.postimg.cc/cLRJ8Xdz/Whats-App-Image-2025-03-16-at-01-33-42.jpg')">🛒 В корзину</button>
+        <button onclick="addToWishlist('Пирсинг', '499.990₸','https://i.postimg.cc/cLRJ8Xdz/Whats-App-Image-2025-03-16-at-01-33-42.jpg')">❤️ В избранное</button>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+
+    <footer class="footer" style="background: url('https://www.krea.ai/api/img?f=webp&i=https%3A%2F%2Ftest1-emgndhaqd0c9h2db.a01.azurefd.net%2Fimages%2F7ba534cc-5c77-4f5c-b13d-2178cb8a93f3.png') no-repeat center center; background-size: cover;">
+        <div class="social-links" style="display: flex; flex-direction: column; gap: 10px;">
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" width="30">
+                <a href="https://www.instagram.com/danaa_to" target="_blank">D_Diamond</a>
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="30">
+                <a href="https://wa.me/870066688904" target="_blank">87052146155</a>
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px;">
+            <img src="https://i.postimg.cc/ZRj61FVv/1.png" alt="WhatsApp" width="30">
+            <a href="history.html" target="_blank">История создания</a>
+        </div>
+        </div>
+    </footer>
+</body>
+</html>

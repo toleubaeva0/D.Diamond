@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <header class="header" style="background: url('https://www.krea.ai/api/img?f=webp&i=https%3A%2F%2Ftest1-emgndhaqd0c9h2db.a01.azurefd.net%2Fimages%2F7ba534cc-5c77-4f5c-b13d-2178cb8a93f3.png') no-repeat center center; background-size: cover; padding: 20px;">
+        <div class="logo">
+            <img src="https://i.postimg.cc/ZRj61FVv/1.png" alt="Логотип" class="logo-image" style="width: 130px; height: auto;">
+        </div>
+        <div class="icons">
+            <button class="icon-button" id="heart-btn"><a href="wishlist.html">❤️</a></button>
+            <button class="icon-button" id="cart-btn"><a href="cart.html">🛒</a></button>
+        </div>
+    </header>
+    
+    <nav class="menu">
+        <span class="menu-title"></span>
+        <div class="menu-items">
+            <a class="menu-btton" href="novinki.html">НОВИНКИ</a>
+            <a class="menu-btton" href="skidki.html">СКИДКИ</a>
+            <a class="menu-btton" href="akcii.html">АКЦИИ</a>
+            <a href="index.html" class="menu-btton">НА ГЛАВНУЮ</a>
+        </div>
+    </nav>
+
+    <!-- Основной контент -->
+    <main class="container">
+        <!-- Сайдбар с каталогом -->
+        <aside class="sidebar">
+            <h3 class="catalog-title">Каталог</h3>
+            <ul class="catalog-list">
+                 <li><a href="sergi.html">СЕРЬГИ</a></li>
+                <li><a href="kolca.html">КОЛЬЦА</a></li>
+                <li><a href="cepi.html">ЦЕПИ</a></li>
+                <li><a href="braslety.html">БРАСЛЕТЫ</a></li>
+                <li><a href="chehol.html">ЧЕХЛЫ</a></li>
+                <li><a href="chasi.html">ЧАСЫ</a></li>
+            </ul>
+        </aside>
+<section class="content">
+    <div class="cart-container">
+        <h1>Корзина</h1>
+        <div id="cart-items"></div>
+        <h2 id="total-price">Общая сумма: 0₸</h2>
+        <div class="cart-buttons">
+            <button class="clear-btn" onclick="clearCart()">Очистить корзину</button>
+            <button class="order-btn" onclick="openModal()">Оформить заказ</button>
+
+ </section>
+    </main>
+    
+
+    <footer class="footer" style="background: url('https://www.krea.ai/api/img?f=webp&i=https%3A%2F%2Ftest1-emgndhaqd0c9h2db.a01.azurefd.net%2Fimages%2F7ba534cc-5c77-4f5c-b13d-2178cb8a93f3.png') no-repeat center center; background-size: cover; padding: 20px;">
+        <div class="social-links" style="display: flex; flex-direction: column; gap: 10px; align-items: center;">
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" width="40">
+                <a href="https://www.instagram.com/danaa_to" target="_blank" style="color: white; text-decoration: none;">D_Diamond</a>
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="40">
+                <a href="https://wa.me/870066688904" target="_blank" style="color: white; text-decoration: none;">87052146155</a>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- Модальное окно -->
+<div id="paymentModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Оплата</h2>
+        <form onsubmit="submitPayment(event)">
+    <label>Имя на карте:</label><br>
+    <input type="text" required><br><br>
+
+    <label>Номер карты:</label><br>
+    <input type="text" required placeholder="0000 0000 0000 0000"><br><br>
+
+    <label>Срок действия:</label><br>
+    <input type="text" required placeholder="MM/YY"><br><br>
+
+    <label>CVV:</label><br>
+    <input type="text" required><br><br>
+
+    <button type="submit" class="order-btn">Оплатить</button>
+</form>
+
+    </div>
+</div>
+
+</body>
+</html>
+
+
+<style>
+        body {
+            font-family:georgia;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            font-size: 32px;
+        }
+        .content {
+            max-width: 1200px;
+            margin: 20px auto;
+            background: white;
+            padding: 15px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        .cart-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            border-bottom: 2px solid #ddd;
+            min-height: 80px;
+        }
+        .cart-item img {
+            width: 150px;
+            height: auto;
+            border-radius: 10px;
+        }
+        .cart-item p {
+            margin: 0;
+            flex-grow: 1;
+            text-align: left;
+            padding-left: 20px;
+            font-size: 20px;
+        }
+        .cart-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+        button {
+            padding: 10px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 20px;
+            transition: 0.3s;
+        }
+        .cart-container{
+        font-size: 17px;
+            
+        }
+        .clear-btn {
+            background-color: #dc3545;
+            color: white;
+        }
+        .clear-btn:hover {
+            background-color: #b02a37;
+        }
+        .order-btn {
+            background-color: #28a745;
+            color: white;
+        }
+        .order-btn:hover {
+            background-color: #218838;
+        }
+        .sidebar {
+    width: 130px;
+    background: #0d3059;
+    padding: 20px;
+    border-radius: 5px;
+    height: 459px;
+     }
+    .catalog-list li {
+    background: black;
+    padding: 10px;
+    font-size: 13px;
+    font-family: georgia;
+    background: white;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.3s;
+     }
+    .catalog-title {
+    font-size: 20px;
+     }
+
+
+/* 🔹 оформить заказ */
+
+     .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 15px;
+    width: 400px;
+    font-size: 18px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    text-align: left;
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.close {
+    float: right;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+    </style>
+
+
+    <script>
+       function loadCart() {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let cartContainer = document.getElementById('cart-items');
+    let totalPrice = 0;
+    cartContainer.innerHTML = '';
+
+    if (cart.length === 0) {
+        cartContainer.innerHTML = '<p>Корзина пуста</p>';
+        document.getElementById('total-price').innerText = 'Общая сумма: 0₸';
+        return;
+    }
+
+    cart.forEach((item, index) => {
+        let itemElement = document.createElement('div');
+        itemElement.className = 'cart-item';
+        itemElement.innerHTML = `
+            <img src="${item.img}" alt="${item.name}">
+            <p><strong>${item.name}</strong><br>Цена: ${item.price}₸</p>
+            <button class="clear-btn" onclick="removeFromCart(${index})">Удалить</button>
+        `;
+        cartContainer.appendChild(itemElement);
+        totalPrice += parseInt(item.price.replace(/[^0-9]/g, ''), 10);
+    });
+
+    document.getElementById('total-price').innerText = `Общая сумма: ${totalPrice.toLocaleString()}₸`;
+}
+
+function removeFromCart(index) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart.splice(index, 1);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    loadCart();
+}
+
+function clearCart() {
+    localStorage.removeItem('cart');
+    document.getElementById('total-price').innerText = 'Общая сумма: 0₸';
+    loadCart();
+}
+
+function openModal() {
+    document.getElementById('paymentModal').style.display = 'block';
+}
+
+function closeModal() {
+    document.getElementById('paymentModal').style.display = 'none';
+}
+
+function submitPayment(event) {
+    event.preventDefault();
+    alert('Оплата прошла успешно!');
+    clearCart();
+    closeModal();
+}
+
+window.onload = loadCart;
+
+
+    </script>

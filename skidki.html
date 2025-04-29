@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Скидки</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function addToCart(name, price, img) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ name, price, img });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert('Товар добавлен в корзину!');
+        }
+        
+        function addToWishlist(name, price, img) {
+            let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+            wishlist.push({ name, price, img });
+            localStorage.setItem('wishlist', JSON.stringify(wishlist));
+            alert('Товар добавлен в избранное!');
+        }
+        // поиск
+        function searchProducts() {
+            const query = document.getElementById("searchInput").value.toLowerCase();
+            const products = document.querySelectorAll(".product");
+            
+            products.forEach(product => {
+                const name = product.querySelector("h3").textContent.toLowerCase();
+                const description = product.querySelector(".product-description").textContent.toLowerCase();
+                
+                if (name.includes(query) || description.includes(query)) {
+                    product.style.display = "block"; // Показываем товар
+                } else {
+                    product.style.display = "none"; // Скрываем товар
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <header class="header" style="background: url('https://www.krea.ai/api/img?f=webp&i=https%3A%2F%2Ftest1-emgndhaqd0c9h2db.a01.azurefd.net%2Fimages%2F7ba534cc-5c77-4f5c-b13d-2178cb8a93f3.png') no-repeat center center; background-size: cover;">
+        <div class="logo">
+            <img src="https://i.postimg.cc/ZRj61FVv/1.png" alt="Логотип" class="logo-image" style="width: 130px; height: auto;">
+        </div>
+        <div class="icons">
+            <button class="icon-button" onclick="window.open('wishlist.html', '_blank')">❤️</button>
+            <button class="icon-button" onclick="window.open('cart.html', '_blank')">🛒</button>
+        </div>
+
+        <!-- поиск -->
+         <div class="search-container" style="margin-left: auto; display: flex; align-items: center; margin-right: 190px;">
+            <input type="text" id="searchInput" placeholder="Поиск товаров..." onkeyup="searchProducts()" style="padding: 8px; width: 200px; font-size: 16px;">
+</div>
+    </header>
+
+    <nav class="menu">
+        <a href="index.html" class="menu-btton">На главную</a>
+        <link rel="stylesheet" href="styles.css">
+
+    </nav>
+    <h2 style="text-align: center; font-family: georgia, sans-serif; font-size: 20px; margin-top: 10px;margin-bottom: 10px;">СКИДКИ</h2>
+
+    <!-- Первый ряд товаров -->
+            <div class="products" style="display: flex; justify-content: space-between; gap: 20px;">
+                <div class="product" style="flex: 1; text-align: center;">
+                    <img src="https://i.postimg.cc/bJg58frc/Whats-App-Image-2025-03-25-at-19-22-01-1.jpg" alt="Набор">
+                   <h3 style="font-family: georgia, sans-serif;">Набор «Холодное сияние» </h3>
+                    <div class="product-description"> Элегантный набор украшений из белого золота, сочетающий утонченность и современный стиль. Изысканный дизайн, украшенный бриллиантами (или другими вставками), придаёт образу роскошь и изящество.</div>
+                    <p><strong style="color: red;">Цена: 1.999.990₸</strong></p>
+                     <button onclick="addToCart('Набор «Холодное сияние»', '1.999.990₸', 'https://i.postimg.cc/bJg58frc/Whats-App-Image-2025-03-25-at-19-22-01-1.jpg')">🛒 В корзину</button>
+            <button onclick="addToWishlist('Набор «Холодное сияние»', '1.999.990₸', 'https://i.postimg.cc/bJg58frc/Whats-App-Image-2025-03-25-at-19-22-01-1.jpg')">❤️ В избранное</button>
+                </div>
+
+                <div class="product" style="flex: 1; text-align: center;">
+                    <img src="https://i.postimg.cc/g2L1h7S8/Whats-App-Image-2025-03-25-at-19-22-01.jpg" alt="Набор">
+                     <h3 style="font-family: georgia, sans-serif;">Набор «Сияние айсберга»</h3>
+                    <div class="product-description">Изысканный набор из белого золота с голубыми камнями, воплощающий утонченность и стиль. Холодный блеск металла гармонично сочетается с нежным сиянием камней, создавая ощущение легкости и воздушности.</div>
+                    <p><strong style="color: red;">Цена: 2.399.990₸</strong></p>
+                    <button onclick="addToCart('Набор «Сияние айсберга»', '2.399.990₸', 'https://i.postimg.cc/g2L1h7S8/Whats-App-Image-2025-03-25-at-19-22-01.jpg')">🛒 В корзину</button>
+            <button onclick="addToWishlist('Набор «Сияние айсберга»', '2.399.990₸', 'https://i.postimg.cc/g2L1h7S8/Whats-App-Image-2025-03-25-at-19-22-01.jpg')">❤️ В избранное</button>
+                </div>
+
+                <div class="product" style="flex: 1; text-align: center;">
+                    <img src="https://i.postimg.cc/zXBszvTd/Whats-App-Image-2025-03-25-at-19-22-00-1.jpg" alt="Набор">
+                     <h3 style="font-family: georgia, sans-serif;">Набор «Солнечная грация»</h3>
+                    <div class="product-description">Роскошный набор из жёлтого золота, отражающий тепло и благородство металла. Лаконичный, но изысканный дизайн делает украшение универсальным выбором для повседневного стиля и особых случаев. </div>
+                    <p><strong style="color: red;">Цена: 1.899.990₸</strong></p>
+                    <button onclick="addToCart('Набор «Солнечная грация»', '1.899.990₸', 'https://i.postimg.cc/zXBszvTd/Whats-App-Image-2025-03-25-at-19-22-00-1.jpg')">🛒 В корзину</button>
+            <button onclick="addToWishlist('Набор «Солнечная грация»', '1.899.990₸', 'https://i.postimg.cc/zXBszvTd/Whats-App-Image-2025-03-25-at-19-22-00-1.jpg')">❤️ В избранное</button>
+                </div>
+
+                <div class="product" style="flex: 1; text-align: center;">
+                    <img src="https://i.postimg.cc/zvJ1Skb5/Whats-App-Image-2025-03-25-at-19-21-59-1.jpg" alt="Набор">
+                     <h3 style="font-family: georgia, sans-serif;">Набор «Белоснежные лепестки»</h3>
+                    <div class="product-description">Безупречный набор из белого золота, излучающий элегантность и утонченность. Нежный комплект из белого золота, отражающий современный стиль и изысканный вкус.Благородный набор из белого золота.</div>
+                    <p><strong style="color: red;">Цена: 1.499.990₸</strong></p>
+                    <button onclick="addToCart('Набор «Белоснежные лепестки»', '1.499.990₸', 'https://i.postimg.cc/zvJ1Skb5/Whats-App-Image-2025-03-25-at-19-21-59-1.jpg')">🛒 В корзину</button>
+            <button onclick="addToWishlist('Набор «Белоснежные лепестки»', '1.499.990₸', 'https://i.postimg.cc/zvJ1Skb5/Whats-App-Image-2025-03-25-at-19-21-59-1.jpg')">❤️ В избранное</button>
+                </div>
+            </div>
+
+            <!-- Второй ряд товаров -->
+            <<div class="products" style="display: flex; justify-content: space-between; gap: 20px; margin-top: 20px;">
+    <div class="product" style="flex: 1; text-align: center;">
+        <img src="https://i.postimg.cc/mDyvDFdn/Whats-App-Image-2025-03-25-at-19-22-00.jpg" alt="Набор">
+        <h3 style="font-family: georgia, sans-serif;">Набор «Лучи солнца»</h3>
+        <div class="product-description">Изысканный набор из жёлтого золота с белыми камнями, сочетающий тепло благородного металла и чистоту сияющих вставок. Элегантный дизайн подчеркивает утончённость и стиль.</div>
+        <p><strong style="color: red;">Цена: 1.999.990₸</strong></p>
+        <button onclick="addToCart('Набор «Лучи солнца»', '1.999.990₸', 'https://i.postimg.cc/mDyvDFdn/Whats-App-Image-2025-03-25-at-19-22-00.jpg')">🛒 В корзину</button>
+        <button onclick="addToWishlist('Набор «Лучи солнца»', '1.999.990₸', 'https://i.postimg.cc/mDyvDFdn/Whats-App-Image-2025-03-25-at-19-22-00.jpg')">❤️ В избранное</button>
+    </div>
+    
+    <div class="product" style="flex: 1; text-align: center;">
+        <img src="https://i.postimg.cc/W1Dcnz3D/Whats-App-Image-2025-03-25-at-19-21-59-2.jpg" alt="Набор">
+        <h3 style="font-family: georgia, sans-serif;">Набор «Лепестки золота»</h3>
+        <div class="product-description">Роскошный набор из золота с сияющими камнями. Элегантное сочетание благородного металла и яркого блеска создаёт утончённый и стильный образ. Идеальный выбор для особых случаев и повседневной элегантности.</div>
+        <p><strong style="color: red;">Цена: 999.990₸</strong></p>
+        <button onclick="addToCart('Набор «Лепестки золота»', '999.990₸', 'https://i.postimg.cc/W1Dcnz3D/Whats-App-Image-2025-03-25-at-19-21-59-2.jpg')">🛒 В корзину</button>
+        <button onclick="addToWishlist('Набор «Лепестки золота»', '999.990₸', 'https://i.postimg.cc/W1Dcnz3D/Whats-App-Image-2025-03-25-at-19-21-59-2.jpg')">❤️ В избранное</button>
+    </div>
+    
+    <div class="product" style="flex: 1; text-align: center;">
+        <img src="https://i.postimg.cc/hGdgSvRF/Whats-App-Image-2025-03-25-at-19-21-59.jpg" alt="Набор">
+        <h3 style="font-family: georgia, sans-serif;">Набор «Золотой бутон»</h3>
+        <div class="product-description"> Изящный набор из золота в форме цветка, воплощающий нежность и утонченность. Благородный блеск металла подчёркивает изысканный дизайн, создавая ощущение лёгкости и природной гармонии.</div>
+        <p><strong style="color: red;">Цена: 1.199.990₸</strong></p>
+        <button onclick="addToCart('Набор «Золотой бутон»', '1.199.990₸', 'https://i.postimg.cc/hGdgSvRF/Whats-App-Image-2025-03-25-at-19-21-59.jpg')">🛒 В корзину</button>
+        <button onclick="addToWishlist('Набор «Золотой бутон»', '1.199.990₸', 'https://i.postimg.cc/hGdgSvRF/Whats-App-Image-2025-03-25-at-19-21-59.jpg')">❤️ В избранное</button>
+    </div>
+    
+    <div class="product" style="flex: 1; text-align: center;">
+        <img src="https://i.postimg.cc/yY1VF7c9/Whats-App-Image-2025-03-25-at-19-21-58.jpg" alt="Набор">
+        <h3 style="font-family: georgia, sans-serif;">Набор «Снежная королева»</h3>
+        <div class="product-description">Элегантный набор из белого золота с глубокими синими камнями. Холодный блеск металла подчёркивает насыщенный цвет вставок, создавая утончённый и благородный образ. Идеальное сочетание роскоши и изящества для особых случаев.</div>
+        <p><strong style="color: red;">Цена: 2.499.990₸</strong></p>
+        <button onclick="addToCart('Набор «Снежная королева»', '2.499.990₸', 'https://i.postimg.cc/yY1VF7c9/Whats-App-Image-2025-03-25-at-19-21-58.jpg')">🛒 В корзину</button>
+        <button onclick="addToWishlist('Набор «Снежная королева»', '2.499.990₸', 'https://i.postimg.cc/yY1VF7c9/Whats-App-Image-2025-03-25-at-19-21-58.jpg')">❤️ В избранное</button>
+    </div>
+</div>
+            </div>
+
+        </section>
+    </main>
+
+
+    <footer class="footer" style="background: url('https://www.krea.ai/api/img?f=webp&i=https%3A%2F%2Ftest1-emgndhaqd0c9h2db.a01.azurefd.net%2Fimages%2F7ba534cc-5c77-4f5c-b13d-2178cb8a93f3.png') no-repeat center center; background-size: cover;">
+        <div class="social-links" style="display: flex; flex-direction: column; gap: 10px;">
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" width="30">
+                <a href="https://www.instagram.com/danaa_to" target="_blank">D_Diamond</a>
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="30">
+                <a href="https://wa.me/870066688904" target="_blank">87052146155</a>
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px;">
+            <img src="https://i.postimg.cc/ZRj61FVv/1.png" alt="WhatsApp" width="30">
+            <a href="history.html" target="_blank">История создания</a>
+        </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Кольца</title>
+    <link rel="stylesheet" href="styles.css">
+    
+   
+</head>
+<body>
+    <header class="header" style="background: url('https://www.krea.ai/api/img?f=webp&i=https%3A%2F%2Ftest1-emgndhaqd0c9h2db.a01.azurefd.net%2Fimages%2F7ba534cc-5c77-4f5c-b13d-2178cb8a93f3.png') no-repeat center center; background-size: cover;">
+        <div class="logo">
+            <img src="https://i.postimg.cc/ZRj61FVv/1.png" alt="Логотип" class="logo-image" style="width: 130px; height: auto;">
+        </div>
+        <div class="icons">
+    <a href="wishlist.html" class="icon-button" id="heart-btn">❤️</a>
+    <a href="cart.html" class="icon-button" id="cart-btn">🛒</a>
+</div>
+        <!-- поиск -->
+         <div class="search-container" style="margin-left: auto; display: flex; align-items: center; margin-right: 190px;">
+            <input type="text" id="searchInput" placeholder="Поиск товаров..." onkeyup="searchProducts()" style="padding: 8px; width: 200px; font-size: 16px;">
+</div>
+    </header>
+
+    <nav class="menu">
+        <a href="index.html" class="menu-btton">На главную</a>
+    </nav>
+
+    <!-- Контейнер основного контента -->
+    <main>
+        <h2 style="text-align: center; font-family: georgia, sans-serif; font-size: 20px; margin-top: 10px;margin-bottom: 10px;">КОЛЬЦА</h2>
+
+        <div class="tovar-container">
+            <div class="tovar">
+                <img src="https://ltdfoto.ru/images/2025/04/08/WhatsApp-Image-2025-03-25-at-21.25.42-1.jpg" alt="Серьги 1">
+                <div class="tovar-name">«Красный дракон»</div>
+                <div class="price">99.990₸</div>
+                <div class="descr">
+                    <p>Яркое кольцо с красным камнем, которое наполнит ваш образ огненной энергией и харизмой.</p>
+                </div>
+                <button onclick="addToCart('«Красный дракон»', '99.990₸','https://ltdfoto.ru/images/2025/04/08/WhatsApp-Image-2025-03-25-at-21.25.42-1.jpg')">🛒 В корзину</button>
+        <button onclick="addToWishlist('«Красный дракон»', '99.990₸','https://ltdfoto.ru/images/2025/04/08/WhatsApp-Image-2025-03-25-at-21.25.42-1.jpg')">❤️ В избранное</button>
+            </div>
+        
+            <div class="tovar">
+                <img src="https://ltdfoto.ru/images/2025/04/08/WhatsApp-Image-2025-03-25-at-21.25.44.jpg" alt="Серьги 2">
+                <div class="tovar-name">«Розовый закат» </div>
+                <div class="price">199.990₸</div>
+                <div class="descr">
+                    <p>Элегантное кольцо с розовым камнем, символизирующее нежность, идеально подходит для романтических вечеров.</p>
+                </div>
+                <button onclick="addToCart('«Розовый закат» ', '199.990₸','https://ltdfoto.ru/images/2025/04/08/WhatsApp-Image-2025-03-25-at-21.25.44.jpg')">🛒 В корзину</button>
+        <button onclick="addToWishlist('«Розовый закат» ', '199.990₸','https://ltdfoto.ru/images/2025/04/08/WhatsApp-Image-2025-03-25-at-21.25.44.jpg')">❤️ В избранное</button>
+            </div>
+        
+            <div class="tovar">
+                <img src="https://ltdfoto.ru/images/2025/04/08/WhatsApp-Image-2025-03-25-at-21.25.43.jpg" alt="Серьги 3">
+                <div class="tovar-name">«Фиолетовая магия»</div>
+                <div class="price">299.990₸</div>
+                <div class="descr">
+                    <p>Кольцо с фиолетовым камнем, излучающее мистическую привлекательность,для ярких образов.</p>
+                </div>
+                <button onclick="addToCart('«Фиолетовая магия»', '299.990₸','https://ltdfoto.ru/images/2025/04/08/WhatsApp-Image-2025-03-25-at-21.25.43.jpg')">🛒 В корзину</button>
+        <button onclick="addToWishlist('«Фиолетовая магия»', '299.990₸','https://ltdfoto.ru/images/2025/04/08/WhatsApp-Image-2025-03-25-at-21.25.43.jpg')">❤️ В избранное</button>
+            </div>
+        
+            <div class="tovar">
+                <img src="https://ltdfoto.ru/images/2025/04/08/WhatsApp-Image-2025-03-25-at-21.25.44-1.jpg" alt="Серьги 4">
+                <div class="tovar-name">«Синяя лагуна»</div>
+                <div class="price">399.990₸</div>
+                <div class="descr">
+                    <p>Кольцо с синим камнем, напоминающее бескрайний океан, создающее ощущение покоя и глубины.</p>
+                </div>
+                <button onclick="addToCart('«Синяя лагуна»', '399.990₸','https://ltdfoto.ru/images/2025/04/08/WhatsApp-Image-2025-03-25-at-21.25.44-1.jpg')">🛒 В корзину</button>
+        <button onclick="addToWishlist('«Синяя лагуна»', '399.990₸','https://ltdfoto.ru/images/2025/04/08/WhatsApp-Image-2025-03-25-at-21.25.44-1.jpg')">❤️ В избранное</button>
+            </div>
+
+            <!-- Второй ряд товаров -->
+            <div class="tovar">
+                <img src="https://ltdfoto.ru/images/2025/04/08/WhatsApp-Image-2025-03-25-at-21.25.42.jpg" alt="Серьги 5">
+                <div class="tovar-name">«Красный коралл»</div>
+                <div class="price">99.990₸</div>
+                <div class="descr">
+                    <p>Яркое кольцо с красным камнем, олицетворяющее страсть, добавит уверенности в любой ситуации.</p>
+                </div>
+                <button onclick="addToCart('«Красный коралл»', '99.990₸','https://ltdfoto.ru/images/2025/04/08/WhatsApp-Image-2025-03-25-at-21.25.42.jpg')">🛒 В корзину</button>
+        <button onclick="addToWishlist('«Красный коралл»', '99.990₸','https://ltdfoto.ru/images/2025/04/08/WhatsApp-Image-2025-03-25-at-21.25.42.jpg)">❤️ В избранное</button>
+            </div>
+
+            <div class="tovar">
+                <img src="https://ltdfoto.ru/images/2025/04/08/WhatsApp-Image-2025-03-25-at-21.25.43-2.jpg" alt="Серьги 6">
+                <div class="tovar-name">«Розовый блеск»</div>
+                <div class="price">199.990₸</div>
+                <div class="descr">
+                    <p>Нежное кольцо с розовым камнем, которое подчеркнёт вашу женственность и элегантность.</p>
+                </div>
+                <button onclick="addToCart('«Розовый блеск»', '199.990₸','https://ltdfoto.ru/images/2025/04/08/WhatsApp-Image-2025-03-25-at-21.25.43-2.jpg')">🛒 В корзину</button>
+        <button onclick="addToWishlist('«Розовый блеск»', '199.990₸','https://ltdfoto.ru/images/2025/04/08/WhatsApp-Image-2025-03-25-at-21.25.43-2.jpg')">❤️ В избранное</button>
+            </div>
+
+            <div class="tovar">
+                <img src="https://ltdfoto.ru/images/2025/04/08/WhatsApp-Image-2025-03-25-at-21.25.43-1.jpg" alt="Серьги 7">
+                <div class="tovar-name">«Фиолетовая гроза»</div>
+                <div class="price">299.990₸</div>
+                <div class="descr">
+                    <p>Изысканное кольцо с фиолетовым камнем, отражающее утончённость и шик, идеально для вечерних выходов.</p>
+                </div>
+                <button onclick="addToCart('«Фиолетовый космос»', '299.990₸','https://ltdfoto.ru/images/2025/04/08/WhatsApp-Image-2025-03-25-at-21.25.43-1.jpg')">🛒 В корзину</button>
+        <button onclick="addToWishlist('«Фиолетовый космос»', '299.990₸','https://ltdfoto.ru/images/2025/04/08/WhatsApp-Image-2025-03-25-at-21.25.43-1.jpg')">❤️ В избранное</button>
+            </div>
+
+            <div class="tovar">
+                <img src="https://ltdfoto.ru/images/2025/04/08/WhatsApp-Image-2025-03-25-at-21.25.45.jpg" alt="Серьги 8">
+                <div class="tovar-name">«Синий лёд» </div>
+                <div class="price">399.990₸</div>
+                <div class="descr">
+                    <p>Кольцо с синим камнем, которое придаёт образу холодную грацию и стильную элегантность.</p>
+                </div>
+                <button onclick="addToCart('«Синий лёд» ', '399.990₸','https://ltdfoto.ru/images/2025/04/08/WhatsApp-Image-2025-03-25-at-21.25.45.jpg')">🛒 В корзину</button>
+        <button onclick="addToWishlist('«Синий лёд» ', '399.990₸','https://ltdfoto.ru/images/2025/04/08/WhatsApp-Image-2025-03-25-at-21.25.45.jpg')">❤️ В избранное</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer" style="background: url('https://www.krea.ai/api/img?f=webp&i=https%3A%2F%2Ftest1-emgndhaqd0c9h2db.a01.azurefd.net%2Fimages%2F7ba534cc-5c77-4f5c-b13d-2178cb8a93f3.png') no-repeat center center; background-size: cover;">
+        <div class="social-links" style="display: flex; flex-direction: column; gap: 10px;">
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" width="30">
+                <a href="https://www.instagram.com/danaa_to" target="_blank">D_Diamond</a>
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="30">
+                <a href="https://wa.me/870066688904" target="_blank">87052146155</a>
+            </div>
+           
+<div style="display: flex; align-items: center; gap: 15px;">
+            <img src="https://i.postimg.cc/ZRj61FVv/1.png" alt="WhatsApp" width="30">
+            <a href="history.html" target="_blank">История создания</a>
+        </div>
+</footer>
+
+<script>
+        function addToCart(name, price, img) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ name, price, img });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert('Товар добавлен в корзину!');
+        }
+        
+        function addToWishlist(name, price, img) {
+            let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+            wishlist.push({ name, price, img });
+            localStorage.setItem('wishlist', JSON.stringify(wishlist));
+            alert('Товар добавлен в избранное!');
+        }
+        
+         // поиск
+        function searchProducts() {
+    const query = document.getElementById("searchInput").value.toLowerCase();
+    const products = document.querySelectorAll(".tovar");
+
+    products.forEach(product => {
+        const name = product.querySelector(".tovar-name").textContent.toLowerCase();
+        const description = product.querySelector(".descr").textContent.toLowerCase();
+
+        if (name.includes(query) || description.includes(query)) {
+            product.style.display = "block";
+        } else {
+            product.style.display = "none";
+        }
+    });
+}
+
+    </script>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+         body {
+            font-family: georgia;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            font-size: 32px;
+        }
+        .cart-container {
+            max-width: 1900px;
+            margin: 20px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        .cart-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            border-bottom: 2px solid #ddd;
+            min-height: 150px;
+        }
+        .cart-item img {
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
+        }
+        .cart-item p {
+            margin: 0;
+            flex-grow: 1;
+            text-align: left;
+            padding-left: 20px;
+            font-size: 34px;
+        }
+        .cart-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+        button {
+            padding: 20px 35px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 35px;
+            transition: 0.3s;
+        }
+        .clear-btn {
+            background-color: #dc3545;
+            color: white;
+        }
+        .clear-btn:hover {
+            background-color: #b02a37;
+        }
+        .order-btn {
+            background-color: #28a745;
+            color: white;
+        }
+        .order-btn:hover {
+            background-color: #218838;
+        }
+    </style>
+    <script>
+        function loadCart() {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            let cartContainer = document.getElementById('cart-items');
+            let totalPrice = 0;
+            cartContainer.innerHTML = '';
+
+            if (cart.length === 0) {
+                cartContainer.innerHTML = '<p>Корзина пуста</p>';
+                document.getElementById('total-price').innerText = 'Общая сумма: 0₸';
+                return;
+            }
+
+            cart.forEach((item, index) => {
+                let itemElement = document.createElement('div');
+                itemElement.className = 'cart-item';
+                itemElement.innerHTML = `
+                    <img src="${item.img}" alt="${item.name}">
+                    <p><strong>${item.name}</strong><br>Цена: ${item.price}₸</p>
+                    <button class="order-btn" onclick="addToCart(${index})">В корзину</button>
+                    <button class="clear-btn" onclick="removeFromCart(${index})">Удалить</button>
+                `;
+                cartContainer.appendChild(itemElement);
+                totalPrice += parseInt(item.price.replace(/[^0-9]/g, ''), 10);
+            });
+
+            document.getElementById('total-price').innerText = `Общая сумма: ${totalPrice.toLocaleString()}₸`;
+        }
+
+        function addToCart(index) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            let item = cart[index];
+            cart.push(item);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            loadCart();
+        }
+
+        function removeFromCart(index) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.splice(index, 1);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            loadCart();
+        }
+
+        function clearCart() {
+            localStorage.removeItem('cart');
+            document.getElementById('total-price').innerText = 'Общая сумма: 0₸';
+            loadCart();
+        }
+
+        window.onload = loadCart;
+
+    </script>
+</head>
+<body>
+    <header class="header" style="background: url('https://www.krea.ai/api/img?f=webp&i=https%3A%2F%2Ftest1-emgndhaqd0c9h2db.a01.azurefd.net%2Fimages%2F7ba534cc-5c77-4f5c-b13d-2178cb8a93f3.png') no-repeat center center; background-size: cover; padding: 20px;">
+        <div class="logo">
+            <img src="https://i.postimg.cc/ZRj61FVv/1.png" alt="Логотип" class="logo-image" style="width: 245px; height: auto;">
+        </div>
+    </header>
+    <nav class="menu">
+        <a href="index.html" class="menu-button">На главную</a>
+        <link rel="stylesheet" href="styles.css">
+
+    </nav>
+
+    <div class="cart-container">
+        <h1>Корзина</h1>
+        <div id="cart-items"></div>
+        <h2 id="total-price">Общая сумма: 0₸</h2>
+        <div class="cart-buttons">
+            <button class="clear-btn" onclick="clearCart()">Очистить корзину</button>
+            <button class="order-btn" onclick="alert('Заказ оформлен!')">Оформить заказ</button>
+        </div>
+    </div>
+
+    <footer class="footer" style="background: url('https://www.krea.ai/api/img?f=webp&i=https%3A%2F%2Ftest1-emgndhaqd0c9h2db.a01.azurefd.net%2Fimages%2F7ba534cc-5c77-4f5c-b13d-2178cb8a93f3.png') no-repeat center center; background-size: cover; padding: 20px;">
+        <div class="social-links" style="display: flex; flex-direction: column; gap: 10px; align-items: center;">
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" width="40">
+                <a href="https://www.instagram.com/danaa_to" target="_blank" style="color: white; text-decoration: none;">D_Diamond</a>
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="40">
+                <a href="https://wa.me/870066688904" target="_blank" style="color: white; text-decoration: none;">87052146155</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
